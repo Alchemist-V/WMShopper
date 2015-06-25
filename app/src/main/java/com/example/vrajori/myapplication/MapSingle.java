@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.Menu;
 import com.google.android.gms.maps.*;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -95,6 +96,7 @@ public class MapSingle extends Activity {
         }
         adjustMap(googleMap);
 
+        addMarker(42.1860423, -120.1785392, "Current Location");
         if (setStore1)
             addMarker(store1.storeX, store1.storeY, store1.storeName);
         if (setStore2)
@@ -146,15 +148,16 @@ public class MapSingle extends Activity {
     private void addMarker(double X, double Y, String storeName){
 
         /** Make sure that the map has been initialised **/
+
         if(null != googleMap){
             googleMap.addMarker(new MarkerOptions()
                             .position(new LatLng(X, Y))
                             .title(storeName)
                             .draggable(true)
+
             );
         }
     }
-
 
 //    @Override
 //    public void onMapReady(){
