@@ -49,13 +49,13 @@ public class WMItemInventory {
             "Sparkle adhesive tape",
             "Pierre Cardin Pen",
             "Nike Sipper",
-            "Happyfood orange candy",
-            "Clayton guitar",
-            "Cutting board",
-            "Kitchen knife set",
-            "Baby product combo",
-            "key chain",
-            "towel set",
+//            "Happyfood orange candy",
+//            "Clayton guitar",
+//            "Cutting board",
+//            "Kitchen knife set",
+//            "Baby product combo",
+//            "key chain",
+//            "towel set",
             "Apple iPhone 5s",
             "Nivea beauty cream",
             "Philips induction cooker",
@@ -162,8 +162,8 @@ public class WMItemInventory {
     public String[] getStore2(){
         return this.store2;
     }
-    public String[] getStore3(){
-        return this.store3;
-    }
+    public String[] getStore3(){return this.store3;}
 
+
+        public String[] getStore4(){return this.store4;}
 }

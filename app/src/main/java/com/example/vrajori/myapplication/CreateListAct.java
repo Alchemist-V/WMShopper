@@ -18,9 +18,9 @@ import android.view.MenuItem;
 public class CreateListAct extends ListActivity {
 
 
-    public String[] selectionList = new String[20];
+    public static String[] selectionList = new String[20];
 
-    int count =0;
+    public static int count =0;
 
     WMItemInventory inventory = new WMItemInventory();
     String[] items = inventory.getInventory();
@@ -48,7 +48,9 @@ public class CreateListAct extends ListActivity {
 
     public void callMapSingleActivity(View view){
         Intent intent = new Intent(this, MapSingle.class);
-        startActivity(intent);
+        System.out.println(selectionList);
+        System.out.println("\n\n\n===============TEST================\n\n\n");
+                startActivity(intent);
     }
 
     public void onListItemClick(ListView parent, View v,
